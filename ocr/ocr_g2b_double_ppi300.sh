@@ -39,11 +39,11 @@ echo "------------------------> Starting OCR-Script (OCR/Mono/250dpi)"
 echo ""
 echo "############################################################################"
 echo ""
-echo "-----------> Converting ${1} to PGM images with pdftoppm (default:250ppi)"
+echo "-----------> Converting ${1} to PGM images with pdftoppm (default:300ppi)"
 echo ""
 echo "############################################################################"
 echo "############################################################################"
-pdftoppm -gray -r 250 $pdftoppmopts "${1}" "./${pdfbase}/${pdfbase}_temp"
+pdftoppm -gray -r 300 $pdftoppmopts "${1}" "./${pdfbase}/${pdfbase}_temp"
 fi
 
 cd ${pdfbase}/

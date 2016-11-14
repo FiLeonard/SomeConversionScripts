@@ -43,14 +43,14 @@ echo "-----------> Converting ${1} to PGM images with pdftoppm (default:250ppi)"
 echo ""
 echo "############################################################################"
 echo "############################################################################"
-pdftoppm -gray -r 250 $pdftoppmopts "${1}" "./${pdfbase}/${pdfbase}_temp"
+pdftoppm -gray -r 300 $pdftoppmopts "${1}" "./${pdfbase}/${pdfbase}_temp"
 fi
 
 cd ${pdfbase}/
 # Optimiere die Bilder
 for image in ./${pdfbase}_temp*
 do
-	../img_gray_ocr.sh "${image}" &
+	../img_ggray_ocr.sh "${image}" &
 	if (( $(($((++n)) % $maxjobs)) == 0 )) ; then
         echo "Doing ${maxjobs} jobs!"
 		wait # wait until all have finished (not optimal, but most times good enough)
