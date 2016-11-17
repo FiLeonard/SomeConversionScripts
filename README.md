@@ -1,2 +1,2 @@
 # SomeConversionScripts
-Some Conversion Scripts for many files (Windows and Linux mixed)
+Some conversion batch files for many video files (ffmpeg) 
